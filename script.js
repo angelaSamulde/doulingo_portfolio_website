@@ -290,8 +290,14 @@ document.addEventListener("DOMContentLoaded", () => {
     bindNavigation();
 
     const remembered = localStorage.getItem("portfolio_connect_user");
-    if (remembered && users[remembered]) {
+    if (remembered) {
+        if (users[remembered]) { // Check if the remembered user key is still valid
         signIn(remembered, true, true);
+        } else {
+            // If the remembered user key is no longer valid (e.g., changed from 'zerah' to 'zerahlen')
+            localStorage.removeItem("portfolio_connect_user");
+            console.warn(`Invalid remembered user key '${remembered}' found in localStorage. Clearing it.`);
+        }
     }
 });
 
@@ -574,8 +580,8 @@ function renderAbout() {
         <section class="card">
             ${state.activeUserKey !== 'avril' ? `
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-                <span class="material-symbols-rounded" style="color: var(--primary);">${state.activeUserKey === 'zerah' ? 'account_circle' : 'fingerprint'}</span>
-                ${state.activeUserKey !== 'zerah' ? '<h2 style="margin: 0;">Biography</h2>' : ''}
+                <span class="material-symbols-rounded" style="color: var(--primary);">${state.activeUserKey === 'zerahlen' ? 'account_circle' : 'fingerprint'}</span>
+                ${state.activeUserKey !== 'zerahlen' ? '<h2 style="margin: 0;">Biography</h2>' : ''}
             </div>
             ` : ''}
             ${user.about.map((paragraph) => `<p>${paragraph}</p>`).join("")}
@@ -686,7 +692,7 @@ function renderBeach() {
 function renderTravel() {
     const user = activeUser();
     const isAvril = state.activeUserKey === 'avril';
-    const isZerah = state.activeUserKey === 'zerah';
+    const isZerah = state.activeUserKey === 'zerahlen';
 
     if (isAvril || isZerah) {
         const introTitle = isAvril ? "Travel Adventures" : "Dream Destinations";
@@ -826,7 +832,7 @@ function renderGallery() {
 
 function renderHobbies() {
     const user = activeUser();
-    const isZerah = state.activeUserKey === 'zerah';
+    const isZerah = state.activeUserKey === 'zerahlen';
 
     const intro = isZerah ? `
         <section class="card" style="margin-bottom: 24px; border-left: 4px solid var(--primary); background: white;">
