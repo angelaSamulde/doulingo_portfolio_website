@@ -104,7 +104,7 @@ a {
 
 .phone-shell {
     width: min(390px, 100vw);
-    height: min(844px, 100vh);
+    height: min(844px, 100dvh);
     padding: 4px;
     border-radius: 34px;
     background: #0f172a;
@@ -130,6 +130,13 @@ a {
 
 .screen.active {
     display: block;
+}
+
+.main-screen.active {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
 .login-screen {
@@ -416,8 +423,7 @@ input[type="checkbox"] {
 }
 
 .top-app-bar {
-    position: sticky;
-    top: 0;
+    flex-shrink: 0;
     z-index: 10;
     height: var(--top-bar-h);
     display: grid;
@@ -471,7 +477,7 @@ input[type="checkbox"] {
 }
 
 .content {
-    height: calc(100% - var(--top-bar-h) - var(--bottom-bar-h));
+    flex: 1;
     padding: 18px 18px 24px;
     overflow-y: auto;
     scroll-behavior: smooth;
@@ -820,12 +826,8 @@ input[type="checkbox"] {
 }
 
 .bottom-nav {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    flex-shrink: 0;
     z-index: 12;
-    height: var(--bottom-bar-h);
     display: flex;
     justify-content: space-around;
     padding: 8px 8px calc(10px + env(safe-area-inset-bottom, 0px));
@@ -1124,7 +1126,7 @@ input[type="checkbox"] {
 
     .phone-shell {
         width: 100vw;
-        height: 100vh;
+        height: 100dvh;
         padding: 0;
         border-radius: 0;
         box-shadow: none;
