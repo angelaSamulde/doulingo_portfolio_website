@@ -8,7 +8,7 @@ const users = {
         secondary: "#4B9CD3",
         accent: "#c3e5f8",
         surface: "#EAF3F8",
-        avatar: "",
+        avatar: "lyn_profile.jpg",
         headline: "Bugasong, Antique, Philippines",
         education: "Bachelor of Science in Office Administration",
         educationSub: "",
@@ -30,22 +30,22 @@ const users = {
         ],
         family: [
             {
-                src: "",
-                title: "Foundation of Love",
-                description: "My family is incredibly important to me, providing the love and guidance that helps me strive for my best in everything I do.",
-                highlight: "Love"
+                src: "lyn1.jpg",
+                title: "Legacy of Remembrance",
+                description: "A poignant expression of respect and family solidarity, celebrating the enduring impact of our loved ones through shared smiles and grace.",
+                highlight: "Legacy"
             },
             {
-                src: "",
-                title: "Constant Support",
-                description: "They are my foundation, offering the unwavering support and motivation I need throughout my academic and personal journey.",
+                src: "lyn2.jpg",
+                title: "Bonds of Encouragement",
+                description: "Capturing the sincere warmth and mutual support that define our interactions, providing a secure and nurturing base for individual growth.",
                 highlight: "Support"
             },
             {
-                src: "",
-                title: "Cherished Moments",
-                description: "Spending quality time with my loved ones helps me relax and create wonderful memories that I will always cherish.",
-                highlight: "Memories"
+                src: "lyn3.jpg",
+                title: "Unified Strength",
+                description: "Standing together in a show of unity and collective happiness, reflecting the strong domestic foundation that anchors my aspirations.",
+                highlight: "Unity"
             }
         ],
         hobbies: [
@@ -643,7 +643,7 @@ function renderFamily() {
                     <span class="material-symbols-rounded" style="color: var(--primary); font-size: 28px;">groups</span>
                     <h2 style="margin: 0;">Family Memories</h2>
                 </div>
-                <span style="font-size: 0.65rem; font-weight: 800; text-transform: uppercase; color: var(--primary); background: var(--accent); padding: 4px 10px; border-radius: 8px; letter-spacing: 0.5px;">${familyData.length} Memories</span>
+                <span style="font-size: 0.58rem; font-weight: 800; text-transform: uppercase; color: var(--primary); background: var(--accent); padding: 4px 10px; border-radius: 8px; letter-spacing: 0.5px;">${familyData.length} Memories</span>
             </div>
             <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.6; margin: 0;">
                 Cherishing every milestone and everyday joy with my family—my constant source of strength, love, and inspiration throughout my journey.
@@ -661,7 +661,7 @@ function renderFamily() {
                         `}
                     </div>
                     <div class="gallery-copy">
-                        <span class="photo-badge" style="background-color: var(--accent); color: var(--primary); font-size: 0.65rem; padding: 2px 10px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">${item.highlight || 'Memory'}</span>
+                        <span class="photo-badge" style="background-color: var(--accent); color: var(--primary); font-size: 0.55rem; padding: 2px 10px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">${item.highlight || 'Memory'}</span>
                         <h3>${item.title}</h3>
                         <p>${item.description}</p>
                     </div>
@@ -688,7 +688,7 @@ function renderBeach() {
                         <img src="${item.src}" alt="${item.title}">
                     </div>
                     <div class="gallery-copy">
-                        <span class="photo-badge" style="background-color: var(--accent); color: var(--primary); font-size: 0.65rem; padding: 2px 10px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">Nature View</span>
+                        <span class="photo-badge" style="background-color: var(--accent); color: var(--primary); font-size: 0.55rem; padding: 2px 10px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">Nature View</span>
                         <h3>${item.title}</h3>
                         <p>${item.description}</p>
                     </div>
@@ -726,7 +726,7 @@ function renderTravel() {
                         `}
                     </div>
                     <div class="gallery-copy">
-                        <span class="photo-badge" style="background-color: var(--accent); color: var(--primary); font-size: 0.65rem; padding: 2px 10px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">${item.highlight}</span>
+                        <span class="photo-badge" style="background-color: var(--accent); color: var(--primary); font-size: 0.55rem; padding: 2px 10px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">${item.highlight}</span>
                         <h3>${item.title}</h3>
                         <p>${item.description}</p>
                     </div>
@@ -808,7 +808,7 @@ function renderGallery() {
                     <span class="material-symbols-rounded" style="color: var(--primary); font-size: 28px;">photo_library</span>
                     <h2 style="margin: 0;">My Photos</h2>
                 </div>
-                <span style="font-size: 0.65rem; font-weight: 800; text-transform: uppercase; color: var(--primary); background: var(--accent); padding: 4px 10px; border-radius: 8px; letter-spacing: 0.5px;">${items.length} Moments</span>
+                <span style="font-size: 0.58rem; font-weight: 800; text-transform: uppercase; color: var(--primary); background: var(--accent); padding: 4px 10px; border-radius: 8px; letter-spacing: 0.5px;">${items.length} Moments</span>
             </div>
             <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.6; margin: 0;">
                 A curated visual journey showcasing academic achievements, cherished connections, and personal growth captured through the lens of lived experiences.
@@ -828,7 +828,7 @@ function renderGallery() {
                         <img src="${src}" alt="${title}">
                     </div>
                     <div class="gallery-copy">
-                        <span class="photo-badge" style="background-color: var(--accent); color: var(--primary); font-size: 0.65rem; padding: 2px 10px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">${highlight}</span>
+                        <span class="photo-badge" style="background-color: var(--accent); color: var(--primary); font-size: 0.55rem; padding: 2px 10px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">${highlight}</span>
                         <h3>${title}</h3>
                         <p>${desc}</p>
                     </div>
@@ -907,7 +907,7 @@ function renderContact() {
 
     const intro = state.activeUserKey === 'avril' ? `
         <div style="margin-bottom: 20px; padding-left: 4px;">
-            <span style="background: #F5F3FF; color: #4F46E5; border: 1px solid #C7D2FE; font-size: 0.65rem; padding: 4px 12px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08);">contact me</span>
+            <span style="background: #F5F3FF; color: #4F46E5; border: 1px solid #C7D2FE; font-size: 0.58rem; padding: 4px 12px; border-radius: 100px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08);">contact me</span>
         </div>
     ` : '';
 
@@ -920,7 +920,7 @@ function renderContact() {
                         <span class="material-symbols-rounded">${icon}</span>
                     </div>
                     <div style="flex: 1;">
-                        <h3 style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 2px; font-weight: 800;">${label}</h3>
+                        <h3 style="font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 2px; font-weight: 800;">${label}</h3>
                         <p style="color: var(--primary); font-weight: 600;">${value}</p>
                     </div>
                     ${state.activeUserKey === 'avril' ? '<span class="material-symbols-rounded" style="margin-left: auto; font-size: 1.2rem; color: #818CF8; opacity: 0.7;">chevron_right</span>' : ''}
