@@ -283,16 +283,25 @@ document.addEventListener("DOMContentLoaded", () => {
     DOM.loader = document.querySelector(".loader-overlay");
     DOM.welcomeNote = document.querySelector(".welcome-notification");
 
-    // Initialize the login screen with Clarisse's (ramonette) blue theme
+    // Ensure the login screen is active and main screen is hidden initially
+    DOM.loginScreen.classList.add("active");
+    DOM.mainScreen.classList.remove("active"); // Explicitly hide main screen
+
+    // Apply a default theme for the login screen (e.g., ramonette's theme)
     applyTheme('ramonette');
 
     bindLogin();
     bindNavigation();
 
+    const usernameInput = document.getElementById("username");
+    const rememberMeCheckbox = document.getElementById("remember-me");
     const remembered = localStorage.getItem("portfolio_connect_user");
     if (remembered) {
         if (users[remembered]) { // Check if the remembered user key is still valid
-        signIn(remembered, true, true);
+            usernameInput.value = remembered;
+            rememberMeCheckbox.checked = true;
+            const firstName = users[remembered].name.split(' ')[0];
+            showLoginMessage(`Welcome back, ${firstName}! Please enter your password.`, false);
         } else {
             // If the remembered user key is no longer valid (e.g., changed from 'zerah' to 'zerahlen')
             localStorage.removeItem("portfolio_connect_user");
