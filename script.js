@@ -1,6 +1,6 @@
 const users = {
-    zerah: {
-        password: "zerah123",
+    zerahlen: {
+        password: "zerahlen016",
         name: "Zerahlen Escoton",
         badge: "",
         paletteName: "Slate Horizon",
@@ -68,7 +68,7 @@ const users = {
         }
     },
     avril: {
-        password: "avril123",
+        password: "avril_003",
         name: "Avril Dhana Fernandez",
         badge: "",
         paletteName: "Velvet Cocoa & Coral",
@@ -125,7 +125,7 @@ const users = {
         }
     },
     ramonette: {
-        password: "ramonette123",
+        password: "@12clarisse",
         name: "Ramonette Clarisse Roel",
         badge: "",
         paletteName: "Midnight Amethyst",
