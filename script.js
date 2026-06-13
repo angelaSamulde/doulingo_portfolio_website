@@ -119,7 +119,7 @@ const users = {
             email: "avrilonzo@gmail.com",
             phone: "+63 975 825 1912",
             facebook: "facebook.com/avril.dhana",
-            address: "San Jose, Antique, Philippines",
+            address: "Bugasong, Antique, Philippines",
             instagram: "instagram.com/kanna.riri",
             linkedin: "linkedin.com/in/avril-fernandez"
         }
